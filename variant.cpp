@@ -1,6 +1,6 @@
 /* copyright */
 #include <sysfs.h>
-#include <trace.h>
+//#include <trace.h> can be included also , since in this file no change is required 
 #include "variant.h"
 
 #ifdef __cplusplus
@@ -71,7 +71,7 @@ PinDescription g_APinDescription[]=
 
 uint32_t sizeof_g_APinDescription;
 
-////////////uint32_t ardPin2DescIdx[GPIO_TOTAL];
+////////////uint32_t ardPin2DescIdx[GPIO_TOTAL]; //// need to find it.
 
 // Sorted by Linux PWM ID
 PwmDescription g_APwmDescription[] = {
