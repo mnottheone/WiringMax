@@ -71,7 +71,7 @@ PinDescription g_APinDescription[]=
 
 uint32_t sizeof_g_APinDescription;
 
-////////////uint32_t ardPin2DescIdx[GPIO_TOTAL]; //// need to find it.
+uint32_t ardPin2DescIdx[GPIO_TOTAL]; 
 
 // Sorted by Linux PWM ID
 PwmDescription g_APwmDescription[] = {
@@ -116,10 +116,6 @@ uint32_t sizeof_g_APinState;
 // assumning I have sysfs , analogio, digital_wiring and trace with required which we really have (almost)
 //TODO RING BUFFERS FOR so, s4, s5 to be added // 
 //
-// functions needed to be defined int variantPinMode(uint8_t pin, uint8_t mode)
-{
-	return 0;
-}
 /*
 int variantPinModeIRQ(uint8_t pin, uint8_t mode)
 {
@@ -198,8 +194,6 @@ void turnOffPWM(uint8_t pin)
 		return;
 }*/
 
-// no fastgpio function required , feature is not supported 
-
 void init( int argc, char * argv[] )
 {
 	/*if(argc > 1)
@@ -213,11 +207,20 @@ void init( int argc, char * argv[] )
 			return;
 */
 	sizeof_g_APinDescription = sizeof(g_APinDescription)/sizeof(struct _PinDescription);
-	pinInit();
-	sizeof_g_APwmDescription = sizeof(g_APwmDescription)/sizeof(struct _PwmDescription);
-	pwmInit();
-	sizeof_g_AdcDescription = sizeof(g_AdcDescription)/sizeof(struct _AdcDescription);
-	adcInit();
+	pinInit(); // It is in wiring_digital 
+	/*  changes in pin description required 
+	*   pin type is automatically handled (need to conform, once more -> checkout lure file )
+	*   can remove mux information 
+	**  pinInit();
+	*   generate handles 
+	*   intialize ardId2DescIdx[] ( not required intially, since directly using calamari lure ids)
+	*/
+	
+	
+	//sizeof_g_APwmDescription = sizeof(g_APwmDescription)/sizeof(struct _PwmDescription);
+	//pwmInit();
+	//sizeof_g_AdcDescription = sizeof(g_AdcDescription)/sizeof(struct _AdcDescription);
+	//adcInit(); // need to work on it wiring_analog
 	sizeof_g_APinState = sizeof(g_APinState)/sizeof(struct _PinState);
 }
 
