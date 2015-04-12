@@ -1,6 +1,6 @@
 /* copyright */
 #include <sysfs.h>
-//#include <trace.h> can be included also , since in this file no change is required 
+#include <trace.h> 
 #include "variant.h"
 
 #ifdef __cplusplus
@@ -44,29 +44,29 @@ Timer / GPIO                 | GPIO_IBL_8254         | 26 | 464    | 208 |
 // SORTED ACCORDING BOARD PIN NUMBER //
 PinDescription g_APinDescription[]=
 {
-//    gpiolib	alias	fastid	ardid	Initial	FixdSt	ptMuxDesc,	MuxCount	type		   Handle	iAlt	pAlt  //
-	{476,	NONE,	NONE,	10,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-        {481,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{477,	NONE,	NONE,	12,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{480,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{478,	NONE,	NONE,	11,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{483,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{479,	NONE,	NONE,	13,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{484,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{499,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{472,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{498,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{473,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{485,	NONE,	NONE,	19,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{475,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{484,	NONE,	NONE,	18,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{474,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{338,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{504,	NONE,	NONE,	3,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{339,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{505,	NONE,	NONE,	9,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{340,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL},
-	{464,	NONE,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		FN_GPIO_OVERDRAIN	-1,	0,	NULL}
+//    gpiolib	alias	ardid	Initial	FixdSt	ptMuxDesc,	MuxCount	 Handle	iAlt	pAlt  //
+	{476,	NONE,	10,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+        {481,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{477,	NONE,	12,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{480,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{478,	NONE,	11,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{483,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{479,	NONE,	13,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{484,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{499,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{472,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{498,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{473,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{485,	NONE,	19,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{475,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{484,	NONE,	18,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{474,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{338,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{504,	NONE,	3,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{339,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{505,	NONE,	9,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{340,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL},
+	{464,	NONE,	NONE,	LOW,	NONE,	NULL,		NONE,		-1,	0,	NULL}
 };
 
 uint32_t sizeof_g_APinDescription;
@@ -209,9 +209,8 @@ void init( int argc, char * argv[] )
 	sizeof_g_APinDescription = sizeof(g_APinDescription)/sizeof(struct _PinDescription);
 	pinInit(); // It is in wiring_digital 
 	/*  changes in pin description required 
-	*   pin type is automatically handled (need to conform, once more -> checkout lure file )
 	*   can remove mux information 
-	**  pinInit();
+	*   pinInit();
 	*   generate handles 
 	*   intialize ardId2DescIdx[] ( not required intially, since directly using calamari lure ids)
 	*/
